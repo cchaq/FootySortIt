@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPitch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/only_pitch3"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/changing_roomA5"
+        android:layout_width="186dp"
+        android:layout_height="186dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/changing_room1" />
+
+    <ImageView
+        android:id="@+id/changing_roomA7"
+        android:layout_width="186dp"
+        android:layout_height="186dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/changing_room1" />
+
+    <ImageView
+        android:id="@+id/changing_roomA8"
+        android:layout_width="186dp"
+        android:layout_height="186dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/changing_room1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPlayerNameTops"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"/>
+
+    <ImageView
+        android:id="@+id/llTop"
+        android:layout_width="92dp"
+        android:layout_height="90dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bScreenshot"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:onClick="takeScreenShot"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background_template"
+    tools:context="org.mobile.android.footysortit.main.ComposeMessage">
+
+    <Button
+        android:id="@+id/sendToPlayers"
+        android:layout_width="157dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_edge_button_white"
+        android:onClick="sendMessage"
+        android:text="@string/sendToPlayers"
+        android:textColor="@color/veniceblue"
+        app:layout_constraintEnd_toStartOf="@+id/pickPlayers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerSms" />
+
+    <EditText
+        android:id="@+id/theMessage"
+        android:layout_width="161dp"
+        android:layout_height="181dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/composeMessage"
+        android:textColorHint="@color/softwhite"
+        android:textColor="@color/softwhite"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendToPlayers" />
+
+    <Button
+        android:id="@+id/playerSms"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_edge_button_white"
+        android:onClick="playerSms"
+        android:text="@string/fullPlayerList"
+        android:textColor="@color/veniceblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewCompose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toEndOf="@+id/theMessage"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfTotalPlayers"
+        app:layout_constraintVertical_bias="0.032">
+
+        <TextView
+            android:id="@+id/aPlayerBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/playerList"
+            android:textColor="@color/softwhite"
+            android:textColorHint="@color/softwhite"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/theMessage"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/numberOfTotalPlayers"
+        android:layout_width="113dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/softwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toEndOf="@+id/theMessage"
+        app:layout_constraintTop_toBottomOf="@+id/pickPlayers" />
+
+    <Button
+        android:id="@+id/pickPlayers"
+        android:layout_width="157dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_edge_button_white"
+        android:onClick="pickPlayerNumbers"
+        android:text="@string/pickPlayers"
+        android:textColor="@color/veniceblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sendToPlayers"
+        app:layout_constraintTop_toBottomOf="@+id/playerSms" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewCompose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2142360027287638/9834260326"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="1.0"
+        ads:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/smsNote"
+        android:layout_width="164dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/userNoteForSms"
+        android:textColor="@color/mint"
+        app:layout_constraintBottom_toTopOf="@+id/adViewCompose"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theMessage"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

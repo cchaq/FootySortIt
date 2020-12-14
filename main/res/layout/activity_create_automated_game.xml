@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_template"
+    tools:context=".automategames.CreateAutomatedGame">
+
+    <ScrollView
+        android:id="@+id/scrollViewFullPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCreateAutomateGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="104dp">
+
+
+            <TextView
+                android:id="@+id/tvOnePickPlayers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:text="@string/onePickYourPlayers"
+                android:textColor="@color/cinna" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPickedPlayers"
+                        android:layout_width="match_parent"
+                        android:layout_height="97dp"
+                        android:text="@string/playerList" />
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/AutomateGameButtonPickPlayers"
+                android:layout_width="154dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_edge_button"
+                android:paddingLeft="20dp"
+                android:text="@string/pickPlayers"
+                android:onClick="pickPlayersForAutomateGame"
+                android:textColor="@color/veniceblue"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="259dp" />
+
+            <TextView
+                android:id="@+id/tvTwoComposeMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/twoComposeYourMessage"
+                android:textColor="@color/cinna" />
+
+            <EditText
+                android:id="@+id/editTextAutomateGameComposeMessage"
+                android:layout_width="215dp"
+                android:layout_height="115dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="@string/composeMessage"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/softwhite"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="153dp" />
+
+            <TextView
+                android:id="@+id/tvThreeChooseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/threeChooseDate"
+                android:textColor="@color/cinna" />
+
+            <Button
+                android:id="@+id/buttonChooseDate"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_edge_button"
+                android:text="@string/chooseDate" />
+
+            <EditText
+                android:id="@+id/etAutomateDate"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="11sp"
+                android:hint="@string/dateOfTheGame"
+                android:inputType="date"
+                android:textColorHint="@color/softwhite" />
+
+            <Button
+                android:id="@+id/buttonChooseTime"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_edge_button"
+                android:text="@string/ChooseTime"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="277dp" />
+
+
+            <EditText
+                android:id="@+id/etAutomateTime"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="time"
+                android:hint="@string/timeOfTheGame"
+                android:textColorHint="@color/softwhite"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/tvFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fourRepeat"
+                android:textColor="@color/cinna"
+                android:visibility="invisible"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupAutomateGame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/radioButtonDat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/radioDay"
+                    android:textColor="@color/cinna"
+                    android:visibility="invisible"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/doneCreatingGame"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="doneCreatingAutomateGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollViewFullPage"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/scrollViewFullPage"
+        app:srcCompat="@drawable/ic_my_icon" />
+
+
+</android.support.constraint.ConstraintLayout>

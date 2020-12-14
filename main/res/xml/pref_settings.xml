@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<CheckBoxPreference
+        android:defaultValue="true"
+        android:key="coming_soon"
+        android:summaryOff="Coming"
+        android:summaryOn="Soon"
+        android:title="Coming Soon"
+        /> -->
+    <Preference
+        android:key="@string/privacy"
+        android:title="@string/privacy">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://sites.google.com/view/footysortitprivacy/home?authuser=1">
+        </intent>
+    </Preference>
+    <Preference
+        android:key="@string/emailKey"
+        android:title="@string/emailPref">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="mailto:footysortit@gmail.com">
+        </intent>
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="veniceblue">#2F4C6D</color>
+    <color name="havelockblue">#637BCB</color>
+    <color name="sanmarino">#4D669D</color>
+    <color name="cornflowerblue">#729DEF</color>
+    <color name="balihai">#889DB2</color>
+    <color name="portage">#798DDE</color>
+    <color name="softwhite">#EEEEEE</color>
+    <color name="centergreen">#00e676</color>
+    <color name="sidegreen">#b2ff59</color>
+    <color name="white">#ffffff</color>
+    <color name="someblue">#000046</color>
+    <color name="somelightblue">#1CB5E0</color>
+    <color name="cinna">#FAFFD1</color>
+    <color name="mint">#FAFFD1</color>
+</resources>

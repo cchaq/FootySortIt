@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_template"
+    tools:context=".main.FullPlayerList">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="addMorePlayers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clear_list"
+        app:layout_constraintTop_toBottomOf="@+id/eachPlayer"
+        app:srcCompat="@drawable/ic_add_circle_outline_black_24dp" />
+
+    <Button
+        android:id="@+id/clear_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/round_edge_button_white"
+        android:onClick="clearPlayerList"
+        android:text="@string/clear_list"
+        android:textColor="@color/veniceblue"
+        app:layout_constraintBottom_toTopOf="@+id/adViewFullList"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sendSmsToPlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:onClick="startSendToPlayingActivity"
+        android:background="@drawable/round_edge_button_white"
+
+        android:text="@string/sendToPlaying"
+        android:textColor="@color/veniceblue"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewFullList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/clear_list"
+        app:layout_constraintTop_toBottomOf="@+id/addPlayers"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewFullList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2142360027287638/8134165842"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.gms.ads.AdView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/eachPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="336dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalIsPlaying"
+        android:layout_width="198dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/totalIsPlaying"
+        android:textColor="@color/mint"
+        app:layout_constraintBottom_toTopOf="@+id/clear_list"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalMaybePlaying"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/mint"
+        app:layout_constraintBottom_toTopOf="@+id/clear_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalNotPlaying"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/totalNotPlaying"
+        android:layout_width="198dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/mint"
+        app:layout_constraintBottom_toTopOf="@+id/clear_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalIsPlaying"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/pitchActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/round_edge_button_white"
+        android:onClick="toFootballPitch"
+        android:text="@string/toPitch"
+        app:layout_constraintBottom_toTopOf="@+id/sendSmsToPlaying"
+        app:layout_constraintEnd_toEndOf="@+id/eachPlayer"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="@+id/totalIsPlaying" />
+
+    <ImageView
+        android:id="@+id/forTut"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/greenlight"
+        app:layout_constraintStart_toStartOf="@+id/eachPlayer"
+        app:layout_constraintTop_toTopOf="@+id/eachPlayer"
+        android:visibility="invisible"/>
+
+
+</android.support.constraint.ConstraintLayout>
